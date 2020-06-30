@@ -1,0 +1,64 @@
+.workplace {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.workplace:not(.last):before {
+  content: " ";
+  position: absolute;
+  width: 4px;
+  top: 30px;
+  left: 13px;
+  height: 98%;
+  background-color: #333;
+}
+
+.dotWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  max-width: 30px;
+  margin-top: 0.3rem;
+  margin-right: 2rem;
+}
+
+.outerDot {
+  background-color: #333;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dotWrap.now {
+  margin-top: 0.25rem;
+}
+
+.outerDot.now {
+  width: 30px;
+  height: 30px;
+}
+
+.innerDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fefefe;
+}
+
+.innerDot.now {
+  width: 15px;
+  height: 15px;
+}
+
+.date {
+  font-size: 14px;
+}

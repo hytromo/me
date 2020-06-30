@@ -1,0 +1,10 @@
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.hr {
+  background-color: #333;
+  height: 5px;
+}

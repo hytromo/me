@@ -1,0 +1,18 @@
+.skill {
+  margin: 3rem 0;
+}
+
+.skillList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.simpleSkillList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}

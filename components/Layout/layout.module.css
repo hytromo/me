@@ -1,0 +1,85 @@
+.container {
+  max-width: 45rem;
+  padding: 6rem 1rem 1rem 1rem;
+  border-radius: 8px;
+  margin: 10rem auto 1rem auto;
+  background-color: #fefefe;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  font-size: 20px;
+}
+
+.topRight {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 1rem;
+  right: 1rem;
+}
+
+.topLeft {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 1rem;
+  left: 1rem;
+}
+
+.topLeft a,
+.topRight a {
+  display: block;
+}
+
+.topLeft a img {
+  width: 30px;
+  height: 30px;
+}
+
+.topRight a img {
+  width: 25px;
+  height: 25px;
+}
+
+.topLeft a img.cv,
+.topRight a img.phone {
+  width: 21.6px;
+}
+
+.topLeft a:not(:first-of-type),
+.topRight a:not(:first-of-type) {
+  margin-left: 0.5rem;
+}
+
+.faceImage {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  border: 5px solid #fefefe;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .faceImage {
+    position: relative;
+    margin-top: 0rem;
+    transform: none;
+  }
+
+  .container {
+    padding: 6rem 0rem 0rem 0rem;
+  }
+}
