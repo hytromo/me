@@ -46,9 +46,19 @@ export default function Home() {
       <Section title={titles.about}>
         <p>I've been programming since my early teens and I can't stop :(</p>
         <p>
-          Using Linux since 6 months after I got my first laptop and bash was my
-          first programming language. I love working on a terminal but I
-          understand the value of well-built GUIs as well.
+          Since then, I've been using and enjoying Linux, which also made me
+          love working on a terminal. Of course, I also{" "}
+          <span style={{ fontStyle: "italic" }}>root</span> for well-built GUIs
+          that provide value and ease of use to the entire team.
+        </p>
+        <p>
+          I've worked in software development (mostly web and desktop) and in
+          devops roles, so I would be in my comfort zone working on these.
+          However, what I'm really interested into, is taking on new challenges
+          and working with awesome, skilled teams where I have a lot to learn
+          and a lot to give! I believe in establishing a good company culture
+          where knowledge sharing is the norm; and not using knowledge as a
+          status symbol.
         </p>
         <p>
           I'm Greek so I like sand even if it's coarse and rough and irritating
@@ -111,7 +121,14 @@ export default function Home() {
           alt="My goofy cat"
         />
       </div>
-      <div style={{ textAlign: "center", fontSize: '1.1rem', fontWeight: 'bold', margin: "10rem 0 2rem 0" }}>
+      <div
+        style={{
+          textAlign: "center",
+          fontSize: "1.1rem",
+          fontWeight: "bold",
+          margin: "10rem 0 2rem 0",
+        }}
+      >
         <a
           onClick={() => {
             document.body.scrollTop = 0;

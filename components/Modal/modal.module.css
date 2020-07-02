@@ -50,3 +50,32 @@
     padding-right: 1rem;
   }
 }
+
+.previewsWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.previewsWrap img {
+  cursor: pointer;
+}
+
+.selectedPicture {
+  cursor: pointer;
+  display: flex;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.selectedPictureImg {
+  display: block;
+  max-width: 100%;
+}
+
+.selectedPictureDescription {
+  text-align: justify;
+  font-size: 0.8rem;
+  text-align-last: center;
+}

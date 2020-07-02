@@ -11,6 +11,7 @@ export const ImageWithFallback = (
 		alt: string;
 		/** without the dot */
 		fallbackExtension: string;
+		onClick?: VoidFunction;
 		extraStyle?: React.CSSProperties;
 		extraClass?: string;
 	}
@@ -34,7 +35,7 @@ export const ImageWithFallback = (
 	}, [src, fallbackExtension]);
 
 	return (
-		<picture>
+		<picture onClick={props.onClick}>
 			<source {...sourceProps} />
 			<img
 				alt={props.alt}

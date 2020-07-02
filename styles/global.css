@@ -13,7 +13,8 @@ body {
   color: #333;
 }
 
-p {
+p,
+li {
   text-align: justify;
 }
 

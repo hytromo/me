@@ -1,14 +1,24 @@
 import React from "react";
 import styles from "./modal.module.css";
+import { ImageWithFallback } from "../Image/ImageWithFallback";
 
-interface OwnPropsI {
+export interface ModalPropsI {
   info: string;
   title: string;
+  pictures?: Array<{
+    alt: string;
+    description: string;
+    previewSrc: string;
+    src: string;
+    fallbackExtension: string;
+  }>;
   onClose: VoidFunction;
 }
 
-export const Modal = (props: OwnPropsI) => {
+export const Modal = (props: ModalPropsI) => {
+  const { pictures, onClose, info, title } = props;
   const contentRef = React.useRef<HTMLDivElement>(null);
+  const [activePictureIndex, setActivePictureIndex] = React.useState(0);
 
   React.useEffect(() => {
     if (contentRef.current) {
@@ -18,12 +28,14 @@ export const Modal = (props: OwnPropsI) => {
 
   const onKeyPress = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.key === "Escape") {
-      props.onClose();
+      onClose();
     }
   };
 
+  const selectedPicture = pictures?.[activePictureIndex];
+
   return (
-    <div className={styles.modal} onClick={props.onClose}>
+    <div className={styles.modal} onClick={onClose}>
       <div
         ref={contentRef}
         tabIndex={0}
@@ -31,12 +43,45 @@ export const Modal = (props: OwnPropsI) => {
         className={styles.content}
         onClick={(e) => e.stopPropagation()}
       >
-        <span className={styles.close} onClick={props.onClose}>
+        <span className={styles.close} onClick={onClose}>
           &times;
         </span>
-        <h2 style={{marginBottom: 0}}>{props.title}</h2>
-		<hr style={{height: 3, backgroundColor: '#333'}}/>
-		<p style={{marginTop: '3rem'}}>{props.info}</p>
+        <h2 style={{ marginBottom: 0 }}>{title}</h2>
+        <hr style={{ height: 3, backgroundColor: "#333" }} />
+        <p style={{ marginTop: "3rem" }}>{info}</p>
+        {!pictures?.length ? null : (
+          <>
+            <h3 style={{margin: '3rem 0 0 0'}}>Pictures</h3>
+            <hr style={{marginBottom: '2rem'}} />
+            {!selectedPicture ? null : (
+              <div>
+                <div className={styles.selectedPicture}>
+                  <ImageWithFallback
+                    onClick={() => {
+                      window.open(selectedPicture.src, "_blank").focus();
+                    }}
+                    extraClass={styles.selectedPictureImg}
+                    {...selectedPicture}
+                  />
+                </div>
+                <div className={styles.selectedPictureDescription}>
+                  {selectedPicture.description}
+                </div>
+              </div>
+            )}
+            <div className={styles.previewsWrap}>
+              {pictures?.map((picture, index) => (
+                <ImageWithFallback
+                  {...{
+                    ...picture,
+                    src: picture.previewSrc,
+                    onClick: () => setActivePictureIndex(index),
+                  }}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
