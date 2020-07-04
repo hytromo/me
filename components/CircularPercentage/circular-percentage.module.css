@@ -9,10 +9,12 @@
 .clickableSvg {
   transition: transform 0.3s ease;
   cursor: pointer;
+  z-index: 10;
 }
 
 .clickableSvg:hover {
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 .svgCircleBg {
@@ -28,7 +30,13 @@
 }
 
 .info {
-  cursor: pointer;
-  font-weight: normal;
-  font-size: 12px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.infoImg {
+  width: 20px;
 }

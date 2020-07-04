@@ -21,22 +21,6 @@ const titles = {
 };
 
 export default function Home() {
-  const work = React.useMemo(
-    () => [
-      ...cv.work,
-      {
-        company: "Born",
-        position: "Infant",
-        location: "Chania, Greece",
-        startDate: "Jul 1994",
-        highlights: ["Lots of crying"],
-        website:
-          "https://www.google.com/maps/place/Chania/@35.5075659,24.0072304,14z/data=!3m1!4b1!4m5!3m4!1s0x149c7dbee0cf3f3b:0x94b3557d79cd2ca8!8m2!3d35.5138298!4d24.0180367",
-      },
-    ],
-    []
-  );
-
   return (
     <Layout>
       <Head>
@@ -44,7 +28,9 @@ export default function Home() {
       </Head>
       <TitlesMenu titles={Object.values(titles)} />
       <Section title={titles.about}>
-        <p>I've been programming since my early teens and I can't stop :(</p>
+        <p>
+          I've been programming since my early teens and I can't really stop :(
+        </p>
         <p>
           Since then, I've been using and enjoying Linux, which also made me
           love working on a terminal. Of course, I also{" "}
@@ -75,12 +61,12 @@ export default function Home() {
         ))}
       </Section>
       <Section title={titles.experience}>
-        {work.map((workplace, index) => (
+        {cv.work.map((workplace, index) => (
           <Workplace
             key={index}
             work={workplace}
             isFirst={index === 0}
-            isLast={index === work.length - 1}
+            isLast={index === cv.work.length - 1}
           />
         ))}
       </Section>
@@ -121,6 +107,16 @@ export default function Home() {
           alt="My goofy cat"
         />
       </div>
+      <p style={{ fontSize: "12px", marginTop: "2rem", textAlign: "center" }}>
+        This website and{" "}
+        <a href="cv.pdf" target="_blank" rel="noopener noreferrer">
+          my CV
+        </a>{" "}
+        have both been built based on{" "}
+        <a href="cv.json" target="_blank" rel="noopener noreferrer">
+          cv.json
+        </a>
+      </p>
       <div
         style={{
           textAlign: "center",

@@ -56,10 +56,12 @@
   flex-direction: row;
   justify-content: space-around;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .previewsWrap img {
   cursor: pointer;
+  border: 1px solid rgba(57, 57, 57, 0.3);
 }
 
 .selectedPicture {

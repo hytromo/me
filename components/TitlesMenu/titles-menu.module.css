@@ -1,0 +1,24 @@
+.menu {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fefefe;
+  padding: 0.25rem 1rem;
+  display: flex;
+  width: 100%;
+  max-width: 45rem;
+  z-index: 100;
+  justify-content: center;
+  box-shadow: 0px -11px 68px -13px #333;
+  flex-wrap: wrap;
+}
+
+.entry {
+  display: inline-block;
+  padding: 0 0.5rem;
+  font-weight: bold;
+}

@@ -48,10 +48,13 @@ const CircularPercentage = (props: OwnPropsI) => {
   }, [setOffset, circumference, progress, offset]);
 
   return (
-    <div style={{ position: "relative" }}>
-      <svg
+	<div
         onClick={props.onClick}
-        className={[styles.svg].concat(props.onClick ? [styles.clickableSvg] : []).join(' ')}
+		 style={{ position: "relative" }} 
+		 className={props.onClick ? styles.clickableSvg : ''}>
+      <svg
+		className={styles.svg}
+		style={{cursor: props.onClick ? 'pointer' : 'default'}}
         width={size}
         height={size}
       >
@@ -84,7 +87,11 @@ const CircularPercentage = (props: OwnPropsI) => {
           {text}
         </text>
       </svg>
-      {!hasInfo ? null : <a onClick={props.onClick} className={styles.info}>details</a>}
+      {!hasInfo ? null : (
+        <a onClick={props.onClick} className={styles.info}>
+          <img alt="info" title="more information" className={styles.infoImg} src="info.svg" />
+        </a>
+      )}
     </div>
   );
 };

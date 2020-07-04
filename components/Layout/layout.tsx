@@ -3,6 +3,8 @@ import React from "react";
 import styles from "./layout.module.css";
 import { ImageWithFallback } from "../Image/ImageWithFallback";
 import cv from "../../public/cv.json";
+import { NormalIcons } from "./NormalIcons";
+import { ContactIcons } from "./ContactIcons";
 
 export default function Layout({ children }) {
   return (
@@ -13,7 +15,7 @@ export default function Layout({ children }) {
           name="description"
           content="Learn how to build a personal website using Next.js"
         />
-		<meta name="og:image" content="https://hytromo.github.io/face.jpeg" />
+        <meta name="og:image" content="https://hytromo.github.io/face.jpeg" />
         <meta name="og:title" content={cv.basics.name} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -26,35 +28,16 @@ export default function Layout({ children }) {
         />
         <div className={styles.name}>{cv.basics.name}</div>
         <div>{cv.work[0].position}</div>
+        <div className={styles.mobileIcons}></div>
         <div className={styles.topLeft}>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/alex-solanos-160709a7/"
-          >
-            <img src="/linkedin.svg" alt="linkedin" />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/hytromo"
-          >
-            <img src="/github.svg" alt="github" />
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href="/cv.pdf">
-            <img className={styles.cv} src="/cv.svg" alt="cv" />
-          </a>
+          <NormalIcons />
         </div>
         <div className={styles.topRight}>
-          <a href={`mailto:${cv.basics.email}`}>
-            <img src="/mail.svg" alt="mail" />
-          </a>
-          <a href="skype:alexsolanos?chat">
-            <img src="/skype.svg" alt="skype" />
-          </a>
-          <a href={`tel:${cv.basics.phone}`}>
-            <img className={styles.phone} src="/phone.svg" alt="phone" />
-          </a>
+          <ContactIcons />
+        </div>
+        <div className={styles.mobileIcons}>
+          <NormalIcons />
+          <ContactIcons />
         </div>
       </header>
       <main>{children}</main>

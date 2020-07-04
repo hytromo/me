@@ -38,19 +38,16 @@
   display: block;
 }
 
-.topLeft a img {
+.topLeft a img,
+.topRight a img,
+.mobileIcons a img {
   width: 30px;
   height: 30px;
 }
 
-.topRight a img {
+.topRight a img.phone,
+.mobileIcons a img.phone {
   width: 25px;
-  height: 25px;
-}
-
-.topLeft a img.cv,
-.topRight a img.phone {
-  width: 21.6px;
 }
 
 .topLeft a:not(:first-of-type),
@@ -72,6 +69,14 @@
   margin-right: auto;
 }
 
+.mobileIcons {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  width: 100%;
+  justify-content: space-around;
+}
+
 @media screen and (max-width: 600px) {
   .faceImage {
     position: relative;
@@ -81,5 +86,16 @@
 
   .container {
     padding: 6rem 0rem 0rem 0rem;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+
+  .topLeft,
+  .topRight {
+    display: none;
+  }
+
+  .mobileIcons {
+    display: flex;
   }
 }

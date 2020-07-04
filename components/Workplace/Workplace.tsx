@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./workplace.module.css";
 import cv from "../../public/cv.json";
+import { LinkifyText } from "../LinkifyText/LinkifyText";
 
 interface OwnPropsI {
   isFirst: boolean;
@@ -54,7 +55,9 @@ export const Workplace = ({ work, isFirst, isLast }: OwnPropsI) => {
           </div>
           <ul>
             {work.highlights.map((highlight, index) => (
-              <li key={index}>{highlight}</li>
+              <li key={index}>
+                <LinkifyText>{highlight}</LinkifyText>
+              </li>
             ))}
           </ul>
         </div>

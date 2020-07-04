@@ -72,6 +72,7 @@ export const Modal = (props: ModalPropsI) => {
             <div className={styles.previewsWrap}>
               {pictures?.map((picture, index) => (
                 <ImageWithFallback
+				  key={index}
                   {...{
                     ...picture,
                     src: picture.previewSrc,
