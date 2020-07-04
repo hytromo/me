@@ -52,7 +52,8 @@ export default function Home() {
         </p>
         <p>
           Gray is my favorite color because it reminds me that nothing is black
-          or white. And because I have a goofy gray cat.
+          or white; <span style={{ fontStyle: "italic" }}>but mostly</span>{" "}
+          because I have a goofy gray cat.
         </p>
       </Section>
       <Section title={titles.skills}>
