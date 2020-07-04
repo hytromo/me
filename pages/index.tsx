@@ -123,7 +123,8 @@ export default function Home() {
           textAlign: "center",
           fontSize: "1.1rem",
           fontWeight: "bold",
-          margin: "10rem 0 2rem 0",
+          marginTop: "10rem",
+          paddingBottom: "10rem",
         }}
       >
         <a

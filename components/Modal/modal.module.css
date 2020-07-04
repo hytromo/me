@@ -11,6 +11,10 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.title {
+  margin-bottom: 0;
+}
+
 .content {
   background-color: #fefefe;
   margin: 10vh auto;
@@ -64,6 +68,10 @@
   border: 1px solid rgba(57, 57, 57, 0.3);
 }
 
+.picturesTitle {
+  margin: 3rem 0 0 0;
+}
+
 .selectedPicture {
   cursor: pointer;
   display: flex;
@@ -80,4 +88,18 @@
   text-align: justify;
   font-size: 0.8rem;
   text-align-last: center;
+  padding: 0 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .picturesTitle,
+  .title {
+    display: inline-block;
+    padding: 0 1rem;
+  }
+
+  .close {
+    margin-right: 1rem;
+    font-size: 45px;
+  }
 }

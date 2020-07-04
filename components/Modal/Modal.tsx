@@ -46,13 +46,13 @@ export const Modal = (props: ModalPropsI) => {
         <span className={styles.close} onClick={onClose}>
           &times;
         </span>
-        <h2 style={{ marginBottom: 0 }}>{title}</h2>
+        <h2 className={styles.title}>{title}</h2>
         <hr style={{ height: 3, backgroundColor: "#333" }} />
         <p style={{ marginTop: "3rem" }}>{info}</p>
         {!pictures?.length ? null : (
           <>
-            <h3 style={{margin: '3rem 0 0 0'}}>Pictures</h3>
-            <hr style={{marginBottom: '2rem'}} />
+            <h3 className={styles.picturesTitle}>Pictures</h3>
+            <hr style={{ marginBottom: "2rem" }} />
             {!selectedPicture ? null : (
               <div>
                 <div className={styles.selectedPicture}>
@@ -72,7 +72,7 @@ export const Modal = (props: ModalPropsI) => {
             <div className={styles.previewsWrap}>
               {pictures?.map((picture, index) => (
                 <ImageWithFallback
-				  key={index}
+                  key={index}
                   {...{
                     ...picture,
                     src: picture.previewSrc,
