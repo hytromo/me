@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "static": "rm -rf out .next && yarn run build && yarn run next export"
+    "static": "rm -rf out .next && yarn run build && yarn run next export",
+    "ez": "cd ../resumake.io && yarn create-cv && cd - && yarn static && cd ../hytromo.github.io && rm -rf * && cp -r ../me/out/* ."
   },
   "dependencies": {
     "next": "9.4.4",
