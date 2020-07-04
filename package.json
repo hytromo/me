@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "static": "yarn run build && yarn run next export"
+    "static": "rm -rf out .next && yarn run build && yarn run next export"
   },
   "dependencies": {
     "next": "9.4.4",
