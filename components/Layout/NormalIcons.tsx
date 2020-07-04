@@ -7,7 +7,7 @@ export const NormalIcons = () => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://www.linkedin.com/in/alex-solanos-160709a7/"
+        href="https://www.linkedin.com/in/alexandros-solanos-160709a7/"
       >
         <img src="/linkedin.svg" alt="linkedin" />
       </a>
