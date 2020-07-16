@@ -79,6 +79,14 @@
   overflow: hidden;
 }
 
+.selectedPicture picture {
+  margin: 0 auto;
+}
+
+.selectedPicture img {
+  max-height: 70vh;
+}
+
 .selectedPictureImg {
   display: block;
   max-width: 100%;
