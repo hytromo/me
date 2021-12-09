@@ -10,7 +10,7 @@
     "ez": "cd ../resumake.io && yarn create-cv && cd - && yarn static && cd ../hytromo.github.io && rm -rf * && cp -r ../me/out/* ."
   },
   "dependencies": {
-    "next": "9.4.4",
+    "next": "11.1.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-linkify": "^1.0.0-alpha"
