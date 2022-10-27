@@ -10,14 +10,15 @@
     "ez": "cd ../resumake.io && yarn create-cv && cd - && yarn static && cd ../hytromo.github.io && rm -rf * && cp -r ../me/out/* ."
   },
   "dependencies": {
-    "next": "9.4.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "eslint-config-next": "^13.0.0",
+    "next": "^13.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-linkify": "^1.0.0-alpha"
   },
   "devDependencies": {
-    "@types/node": "^14.0.14",
-    "@types/react": "^16.9.41",
-    "typescript": "^3.9.5"
+    "@types/node": "^18.11.7",
+    "@types/react": "^18.0.24",
+    "typescript": "^4.3.2"
   }
 }
